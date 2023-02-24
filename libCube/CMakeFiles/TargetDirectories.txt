@@ -1,0 +1,3 @@
+/Users/morrisj/Source/Cube/libCube/CMakeFiles/Cube.dir
+/Users/morrisj/Source/Cube/libCube/CMakeFiles/edit_cache.dir
+/Users/morrisj/Source/Cube/libCube/CMakeFiles/rebuild_cache.dir

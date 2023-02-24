@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/morrisj/Source/Cube/Cube/include -I/Users/morrisj/Source/llmv/VulkanSDK/current/MoltenVK/include
+CXX_INCLUDES = -I/Users/morrisj/Source/Cube/libCube/include -I/Users/morrisj/Source/llmv/VulkanSDK/current/MoltenVK/include
 
 CXX_FLAGSarm64 =  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -std=gnu++20
 

@@ -3,19 +3,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftElephant",
+    name: "Cube",
+    platforms: [.iOS(.v16)],
 
     products: [
-        .library(name: "SwiftElephant", targets: ["SwiftElephant"]),
+        .library(
+            name: "Cube",
+            targets: ["Cube"]
+        ),
     ],
 
     dependencies: [],
 
     targets: [
-        .target(name: "SwiftElephant", dependencies: []),
+        .target(name: "Cube", dependencies: ["OCCube"]),
+        .target(name: "OCCube", dependencies: ["cube"]),
         .binaryTarget(
-            name: "libCube",
-            path: "../cube.xcframework"
+            name: "cube",
+            path: "./cube.xcframework"
         )
     ]
 )

@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.25.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/morrisj/Source/Cube/Cube
+CMAKE_SOURCE_DIR = /Users/morrisj/Source/Cube/libCube
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/morrisj/Source/Cube/Cube
+CMAKE_BINARY_DIR = /Users/morrisj/Source/Cube/libCube
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morrisj/Source/Cube/Cube/CMakeFiles /Users/morrisj/Source/Cube/Cube//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morrisj/Source/Cube/libCube/CMakeFiles /Users/morrisj/Source/Cube/libCube//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morrisj/Source/Cube/Cube/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morrisj/Source/Cube/libCube/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

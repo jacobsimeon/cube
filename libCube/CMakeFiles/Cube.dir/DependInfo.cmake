@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/morrisj/Source/Cube/Cube/cube.cpp" "CMakeFiles/Cube.dir/cube.cpp.o" "gcc" "CMakeFiles/Cube.dir/cube.cpp.o.d"
+  "/Users/morrisj/Source/Cube/libCube/cube.cpp" "CMakeFiles/Cube.dir/cube.cpp.o" "gcc" "CMakeFiles/Cube.dir/cube.cpp.o.d"
   )
 
 # Targets to which this target links.

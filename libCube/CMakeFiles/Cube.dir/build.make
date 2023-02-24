@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.25.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/morrisj/Source/Cube/Cube
+CMAKE_SOURCE_DIR = /Users/morrisj/Source/Cube/libCube
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/morrisj/Source/Cube/Cube
+CMAKE_BINARY_DIR = /Users/morrisj/Source/Cube/libCube
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Cube.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/Cube.dir/flags.make
 CMakeFiles/Cube.dir/cube.cpp.o: CMakeFiles/Cube.dir/flags.make
 CMakeFiles/Cube.dir/cube.cpp.o: cube.cpp
 CMakeFiles/Cube.dir/cube.cpp.o: CMakeFiles/Cube.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/morrisj/Source/Cube/Cube/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cube.dir/cube.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cube.dir/cube.cpp.o -MF CMakeFiles/Cube.dir/cube.cpp.o.d -o CMakeFiles/Cube.dir/cube.cpp.o -c /Users/morrisj/Source/Cube/Cube/cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/morrisj/Source/Cube/libCube/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cube.dir/cube.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cube.dir/cube.cpp.o -MF CMakeFiles/Cube.dir/cube.cpp.o.d -o CMakeFiles/Cube.dir/cube.cpp.o -c /Users/morrisj/Source/Cube/libCube/cube.cpp
 
 CMakeFiles/Cube.dir/cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Cube.dir/cube.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morrisj/Source/Cube/Cube/cube.cpp > CMakeFiles/Cube.dir/cube.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morrisj/Source/Cube/libCube/cube.cpp > CMakeFiles/Cube.dir/cube.cpp.i
 
 CMakeFiles/Cube.dir/cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Cube.dir/cube.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morrisj/Source/Cube/Cube/cube.cpp -o CMakeFiles/Cube.dir/cube.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morrisj/Source/Cube/libCube/cube.cpp -o CMakeFiles/Cube.dir/cube.cpp.s
 
 # Object files for target Cube
 Cube_OBJECTS = \
@@ -93,7 +93,7 @@ Cube_EXTERNAL_OBJECTS =
 libCube.a: CMakeFiles/Cube.dir/cube.cpp.o
 libCube.a: CMakeFiles/Cube.dir/build.make
 libCube.a: CMakeFiles/Cube.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/morrisj/Source/Cube/Cube/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libCube.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/morrisj/Source/Cube/libCube/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libCube.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Cube.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Cube.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/Cube.dir/clean:
 .PHONY : CMakeFiles/Cube.dir/clean
 
 CMakeFiles/Cube.dir/depend:
-	cd /Users/morrisj/Source/Cube/Cube && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/morrisj/Source/Cube/Cube /Users/morrisj/Source/Cube/Cube /Users/morrisj/Source/Cube/Cube /Users/morrisj/Source/Cube/Cube /Users/morrisj/Source/Cube/Cube/CMakeFiles/Cube.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/morrisj/Source/Cube/libCube && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/morrisj/Source/Cube/libCube /Users/morrisj/Source/Cube/libCube /Users/morrisj/Source/Cube/libCube /Users/morrisj/Source/Cube/libCube /Users/morrisj/Source/Cube/libCube/CMakeFiles/Cube.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Cube.dir/depend
 
