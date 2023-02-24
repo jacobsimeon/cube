@@ -1,14 +1,14 @@
 import SwiftUI
 import OCCube
 
-struct CubeView: View {
+public struct CubeView: View {
     private let demo: Demo
 
     init() {
         demo = Demo()
     }
 
-    var body: some View {
+    public var body: some View {
         MetalLayerView()
     }
 }
