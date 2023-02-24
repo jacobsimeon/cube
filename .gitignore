@@ -1,0 +1,6 @@
+CMakeFiles
+.DS_Store
+Cube/CMakeCache.txt
+Cube/cmake_install.cmake
+Cube/libCube.a
+Cube/Makefile
