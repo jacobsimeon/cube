@@ -3230,3 +3230,24 @@ static void demo_main(Demo &demo, void *caMetalLayer, int argc, const char *argv
 #else
 #error "Platform not supported"
 #endif
+
+void* demoCreate(void) {
+    return new Demo;
+}
+
+void demoMain(void* demo, void *caMetalLayer, int argc, const char *argv[]) {
+    demo_main(*(Demo*)demo, caMetalLayer, argc, argv);
+}
+
+void demoRun(void* demo) {
+    ((Demo*)demo)->run();
+}
+
+void demoDestroy(void* demo)  {
+    ((Demo*)demo)->cleanup();
+    delete demo;
+}
+
+
+
+
