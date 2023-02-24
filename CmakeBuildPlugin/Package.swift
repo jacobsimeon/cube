@@ -8,13 +8,13 @@ let package = Package(
     products: [
         .plugin(
         name: "CmakeBuildPlugin",
-        targets: ["CmakeBuildPlugin"]),
+        targets: ["CmakeBuildPlugin"]
         )
     ],
     targets: [
         .plugin(
         name: "CmakeBuildPlugin",
-        capability: .buildtool()
+        capability: .buildTool()
         )
     ]
 )
