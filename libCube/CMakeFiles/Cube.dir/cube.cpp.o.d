@@ -451,7 +451,6 @@ CMakeFiles/Cube.dir/cube.cpp.o: \
   /Users/morrisj/Source/Cube/libCube/include/linmath.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/c++/v1/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/math.h \
-  /Users/morrisj/Source/Cube/libCube/include/demo.h \
   /Users/morrisj/Source/Cube/libCube/cube.frag.inc \
   /Users/morrisj/Source/Cube/libCube/cube.vert.inc \
   /Users/morrisj/Source/Cube/libCube/include/lunarg.ppm.h

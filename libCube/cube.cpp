@@ -3245,9 +3245,10 @@ void demoRun(void* demo) {
 
 void demoDestroy(void* demo)  {
     ((Demo*)demo)->cleanup();
-    delete demo;
+    delete (Demo*)demo;
 }
 
-
-
+void demoResize(void *demo) {
+    ((Demo*)demo)->resize();
+}
 

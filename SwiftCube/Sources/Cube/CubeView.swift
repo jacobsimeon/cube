@@ -1,27 +1,73 @@
 import SwiftUI
+import UIKit
 import OCCube
 
 public struct CubeView: View {
-    private let demo: Demo
+    public init() {
 
-    init() {
-        demo = Demo()
     }
-
+    
     public var body: some View {
         MetalLayerView()
     }
 }
 
-private struct MetalLayerView: UIViewRepresentable {
+private struct MetalLayerView: UIViewControllerRepresentable {
     typealias UIViewType = MetalLayerUIView
 
-    func makeUIView(context: Context) -> UIViewType {
-        MetalLayerUIView()
+    func makeUIViewController(context: Context) -> some UIViewController {
+        return MetalLayerViewController()
     }
 
-    func updateUIView(_ uiView: UIViewType, context: Context) {
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        //
+    }
+}
 
+private class MetalLayerViewController: UIViewController {
+    private let demo: OCDemo
+    private var displayLink: CADisplayLink? = nil
+
+    init() {
+        demo = OCDemo()
+
+        super.init(nibName: nil, bundle: nil)
+
+        displayLink = CADisplayLink(target: self, selector: #selector(draw))
+        displayLink?.add(to: .main, forMode: .common)
+        displayLink?.isPaused = true
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        displayLink?.invalidate()
+    }
+
+    override func loadView() {
+        view = MetalLayerUIView()
+        start(layer: view.layer)
+    }
+
+    func start(layer: CALayer) {
+        displayLink?.isPaused = false
+        demo.main(layer)
+    }
+
+    @objc func draw(_: CADisplayLink) {
+        demo.run()
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        demo.resize()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        demo.resize()
     }
 }
 

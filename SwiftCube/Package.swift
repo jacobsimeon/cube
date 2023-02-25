@@ -1,6 +1,7 @@
 // swift-tools-version: 5.7
 
 import PackageDescription
+import PackagePlugin
 
 let package = Package(
     name: "Cube",
@@ -9,6 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "Cube",
+            type: .static,
             targets: ["Cube"]
         ),
     ],

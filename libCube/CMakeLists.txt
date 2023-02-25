@@ -20,5 +20,5 @@ add_library(Cube STATIC cube.cpp)
 # Specify the header files for the library
 
 message(${MOLTENVK_PATH})
-target_link_libraries(Cube ${MOLTENVK_PATH} "-framework Foundation -framework CoreGraphics -framework UIKit -framework Metal -framework QuartzCore -framework IOSurface")
+target_link_libraries(Cube PRIVATE ${MOLTENVK_PATH} "-framework Foundation -framework CoreGraphics -framework UIKit -framework Metal -framework QuartzCore -framework IOSurface")
 target_include_directories(Cube PUBLIC include)
