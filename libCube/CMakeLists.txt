@@ -16,14 +16,14 @@ set(MOLTENVK_INCLUDE_PATH /Users/rexj/Development/VulkanSDK-1.3.236.0/MoltenVK/i
 
 include_directories(include ${MOLTENVK_INCLUDE_PATH})
 
-add_library(Cubey STATIC cube.cpp)
+add_library(Cube STATIC cube.cpp)
 
 # Use IMPORTED for pre-built external libraries
 add_library(MoltenVK STATIC IMPORTED) 
 set_target_properties(MoltenVK PROPERTIES IMPORTED_LOCATION ${MOLTENVK_PATH})
 
 # This does not bind static libraries together
-target_link_libraries(Cubey 
+target_link_libraries(Cube 
 	PRIVATE  MoltenVK
 	-framework Foundation 
 	-framework CoreGraphics 
@@ -41,13 +41,13 @@ target_link_libraries(Cubey
 #     000000000001d0e4 T _vkCmdDraw
 #                      U _vkCmdDraw
 #
-add_custom_command(TARGET Cubey POST_BUILD COMMAND libtool -static -o libCube.a $<TARGET_FILE:MoltenVK> $<TARGET_FILE:Cubey>)
+add_custom_command(TARGET Cube POST_BUILD COMMAND libtool -static -o libCube.a $<TARGET_FILE:MoltenVK> $<TARGET_FILE:Cube>)
 
 # If we want to to get rid of the undefined symbol above, we can use clang to rebuild the library. Not sure which is the right choice
 # Reference: https://stackoverflow.com/a/68407916
 
-#add_custom_command(TARGET Cubey POST_BUILD COMMAND xcrun -sdk iphoneos clang -arch arm64 -r -o libcube.o -Wl,-all_load libCubey.a /Users/rexj/Development/VulkanSDK-1.3.236.0/MoltenVK/MoltenVK.xcframework/ios-arm64/libMoltenVK.a)
-#add_custom_command(TARGET Cubey POST_BUILD COMMAND ar cr libcube.a libcube.o)
+#add_custom_command(TARGET Cube POST_BUILD COMMAND xcrun -sdk iphoneos clang -arch arm64 -r -o libcube.o -Wl,-all_load libCube.a /Users/rexj/Development/VulkanSDK-1.3.236.0/MoltenVK/MoltenVK.xcframework/ios-arm64/libMoltenVK.a)
+#add_custom_command(TARGET Cube POST_BUILD COMMAND ar cr libcube.a libcube.o)
 
 
 ## OTHER USEFUL REF

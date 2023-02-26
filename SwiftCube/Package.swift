@@ -22,12 +22,6 @@ let package = Package(
         .target(name: "Cube", dependencies: ["OCCube"]),
         .target(name: "OCCube", 
                 dependencies: ["cube"],
-//                 linkerSettings: [
-//                    .unsafeFlags([
-////                        "-Wl,-all_load",
-//                        //"-Wl,-force_load,/Users/rexj/Development/cube/libCube/cube.xcframework/ios-arm64/libCube.a"
-//                    ])
-//                ],
                 plugins: [ .plugin(name: "CmakeBuildPlugin", package: "CmakeBuildPlugin")]
         ),
         .binaryTarget(

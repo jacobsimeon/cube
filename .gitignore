@@ -5,3 +5,4 @@ xcuserdata
 *.a
 *.xcframework
 CMakeCache.txt
+libCube/Makefile
