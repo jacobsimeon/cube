@@ -6,12 +6,12 @@ import Darwin
     func createBuildCommands(context: PluginContext, target: Target) async throws -> [Command] {
 
         //  You see this in xcode
-        print("Hello World from print")
+        print("Do the Cmake thing")
 
         return [
             .prebuildCommand (
                 displayName: "Hello world",
-                executable: .init("ls"),
+                executable: .init("/bin/date"),
                 arguments: [],
                 outputFilesDirectory: Path("/dev/null")
             )

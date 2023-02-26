@@ -74,17 +74,17 @@ constexpr uint32_t FRAME_LAG = 2;
 // easier to use the C function for extension functions
 PFN_vkCreateDebugUtilsMessengerEXT pfnVkCreateDebugUtilsMessengerEXT;
 PFN_vkDestroyDebugUtilsMessengerEXT pfnVkDestroyDebugUtilsMessengerEXT;
-VKAPI_ATTR VkResult VKAPI_CALL vkCreateDebugUtilsMessengerEXT(VkInstance instance,
-                                                              const VkDebugUtilsMessengerCreateInfoEXT *pCreateInfo,
-                                                              const VkAllocationCallbacks *pAllocator,
-                                                              VkDebugUtilsMessengerEXT *pMessenger) {
-    return pfnVkCreateDebugUtilsMessengerEXT(instance, pCreateInfo, pAllocator, pMessenger);
-}
-
-VKAPI_ATTR void VKAPI_CALL vkDestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT messenger,
-                                                           VkAllocationCallbacks const *pAllocator) {
-    return pfnVkDestroyDebugUtilsMessengerEXT(instance, messenger, pAllocator);
-}
+//VKAPI_ATTR VkResult VKAPI_CALL vkCreateDebugUtilsMessengerEXT(VkInstance instance,
+//                                                              const VkDebugUtilsMessengerCreateInfoEXT *pCreateInfo,
+//                                                              const VkAllocationCallbacks *pAllocator,
+//                                                              VkDebugUtilsMessengerEXT *pMessenger) {
+//    return pfnVkCreateDebugUtilsMessengerEXT(instance, pCreateInfo, pAllocator, pMessenger);
+//}
+//
+//VKAPI_ATTR void VKAPI_CALL vkDestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT messenger,
+//                                                           VkAllocationCallbacks const *pAllocator) {
+//    return pfnVkDestroyDebugUtilsMessengerEXT(instance, messenger, pAllocator);
+//}
 
 struct texture_object {
     vk::Sampler sampler;

@@ -1,7 +1,6 @@
 // swift-tools-version: 5.7
 
 import PackageDescription
-import PackagePlugin
 
 let package = Package(
     name: "Cube",
@@ -15,11 +14,22 @@ let package = Package(
         ),
     ],
 
-    dependencies: [],
+    dependencies: [
+        .package(path: "../CmakeBuildPlugin")
+    ],
 
     targets: [
         .target(name: "Cube", dependencies: ["OCCube"]),
-        .target(name: "OCCube", dependencies: ["cube"]),
+        .target(name: "OCCube", 
+                dependencies: ["cube"],
+//                 linkerSettings: [
+//                    .unsafeFlags([
+////                        "-Wl,-all_load",
+//                        //"-Wl,-force_load,/Users/rexj/Development/cube/libCube/cube.xcframework/ios-arm64/libCube.a"
+//                    ])
+//                ],
+                plugins: [ .plugin(name: "CmakeBuildPlugin", package: "CmakeBuildPlugin")]
+        ),
         .binaryTarget(
             name: "cube",
             path: "./cube.xcframework"
