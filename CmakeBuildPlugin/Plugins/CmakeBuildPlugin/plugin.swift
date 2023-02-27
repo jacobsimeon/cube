@@ -6,7 +6,17 @@ import Darwin
 
     func createBuildCommands(context: PackagePlugin.PluginContext, target: PackagePlugin.Target) async throws -> [PackagePlugin.Command] {
 
-        let xcframeworkPath = context.package.directory.appending(subpath: "cube.xcframework")
+        let xcframeworkTargetDir = context.pluginWorkDirectory
+
+        // FAILS WITH A BUNCH OF ERRORS
+        /*
+        let xcframeworkTargetDir = context.package.directory.appending([
+            "..",
+            "SwiftCube"
+        ])
+        */
+
+        let xcframeworkPath = xcframeworkTargetDir.appending(subpath: "cube.xcframework")
 
         let scriptPath = context.package.directory.appending([
             "..",
@@ -14,13 +24,15 @@ import Darwin
             "build-xcframework"
         ])
 
+        debugPrint("HELLO WORLD \(xcframeworkTargetDir)")
+
         return [
             .prebuildCommand(displayName: "Generated xcframework",
                              executable: .init(scriptPath.string),
                              arguments: [
                                 xcframeworkPath
                              ],
-                             outputFilesDirectory: context.package.directory
+                             outputFilesDirectory: xcframeworkTargetDir
                             )
         ]
     }

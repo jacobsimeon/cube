@@ -14,19 +14,19 @@ let package = Package(
         ),
     ],
 
-//    dependencies: [
-//        .package(path: "../CmakeBuildPlugin")
-//    ],
+    dependencies: [
+        .package(path: "../CmakeBuildPlugin")
+    ],
 
     targets: [
         .target(name: "Cube",
                 dependencies: ["OCCube"]),
         .target(name: "OCCube",
-                dependencies: ["cube"]
-//                plugins: [
-//                    .plugin(name: "CmakeBuildPlugin",
-//                            package: "CmakeBuildPlugin")
-//                ]
+//                dependencies: ["cube"],
+                plugins: [
+                    .plugin(name: "CmakeBuildPlugin",
+                            package: "CmakeBuildPlugin")
+                ]
         ),
         .binaryTarget(
             name: "cube",
