@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7442C0A29B2ACF500C7DB01 /* CubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = E7442C0929B2ACF500C7DB01 /* CubeKit */; };
 		E75CC4D829A96E66001F0AD2 /* CubeiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CC4D729A96E66001F0AD2 /* CubeiOSApp.swift */; };
 		E75CC4DA29A96E66001F0AD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CC4D929A96E66001F0AD2 /* ContentView.swift */; };
 		E75CC4DC29A96E69001F0AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75CC4DB29A96E69001F0AD2 /* Assets.xcassets */; };
 		E75CC4DF29A96E69001F0AD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75CC4DE29A96E69001F0AD2 /* Preview Assets.xcassets */; };
-		E75CC4E829A96EA0001F0AD2 /* Cube in Frameworks */ = {isa = PBXBuildFile; productRef = E75CC4E729A96EA0001F0AD2 /* Cube */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7442C0829B2AC8800C7DB01 /* CubeKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CubeKit; path = ../CubeKit; sourceTree = "<group>"; };
 		E75CC4D429A96E66001F0AD2 /* CubeiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75CC4D729A96E66001F0AD2 /* CubeiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeiOSApp.swift; sourceTree = "<group>"; };
 		E75CC4D929A96E66001F0AD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E75CC4DB29A96E69001F0AD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E75CC4DE29A96E69001F0AD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E75CC4E529A96E8A001F0AD2 /* SwiftCube */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftCube; path = ../SwiftCube; sourceTree = "<group>"; };
 		E75CC4E929A97450001F0AD2 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = ../../../lib/VulkanSDK/1.3.239.0/MoltenVK/MoltenVK.xcframework; sourceTree = "<group>"; };
+		E75D2A2E29B2AA6C0041F3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75CC4E829A96EA0001F0AD2 /* Cube in Frameworks */,
+				E7442C0A29B2ACF500C7DB01 /* CubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +40,7 @@
 		E75CC4CB29A96E66001F0AD2 = {
 			isa = PBXGroup;
 			children = (
-				E75CC4E529A96E8A001F0AD2 /* SwiftCube */,
+				E7442C0829B2AC8800C7DB01 /* CubeKit */,
 				E75CC4D629A96E66001F0AD2 /* CubeiOS */,
 				E75CC4D529A96E66001F0AD2 /* Products */,
 				E75CC4E629A96EA0001F0AD2 /* Frameworks */,
@@ -57,6 +58,7 @@
 		E75CC4D629A96E66001F0AD2 /* CubeiOS */ = {
 			isa = PBXGroup;
 			children = (
+				E75D2A2E29B2AA6C0041F3D1 /* Info.plist */,
 				E75CC4D729A96E66001F0AD2 /* CubeiOSApp.swift */,
 				E75CC4D929A96E66001F0AD2 /* ContentView.swift */,
 				E75CC4DB29A96E69001F0AD2 /* Assets.xcassets */,
@@ -98,7 +100,7 @@
 			);
 			name = CubeiOS;
 			packageProductDependencies = (
-				E75CC4E729A96EA0001F0AD2 /* Cube */,
+				E7442C0929B2ACF500C7DB01 /* CubeKit */,
 			);
 			productName = CubeiOS;
 			productReference = E75CC4D429A96E66001F0AD2 /* CubeiOS.app */;
@@ -284,9 +286,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CubeiOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 24Y8WKAZA3;
+				DEVELOPMENT_TEAM = XP67Y385L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CubeiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,7 +300,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.julianrex-autodesk.CubeiOS";
+				PRODUCT_BUNDLE_IDENTIFIER = io.jacobsimeon.CubeiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,6 +319,7 @@
 				DEVELOPMENT_TEAM = XP67Y385L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CubeiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -358,9 +362,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E75CC4E729A96EA0001F0AD2 /* Cube */ = {
+		E7442C0929B2ACF500C7DB01 /* CubeKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Cube;
+			productName = CubeKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Cube
+import CubeKit
 
 @main
 struct CubeiOSApp: App {
